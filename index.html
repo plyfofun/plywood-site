@@ -6,6 +6,18 @@
     <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content="#17120e" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#f4ede1" media="(prefers-color-scheme: light)" />
+    <script>
+      // Apply the saved theme choice (src/lib/theme.js) before the first paint.
+      try {
+        var t = localStorage.getItem('plywood-theme')
+        if (t === 'light' || t === 'dark') {
+          document.documentElement.setAttribute('data-theme', t)
+          document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+            m.setAttribute('content', t === 'light' ? '#f4ede1' : '#17120e')
+          })
+        }
+      } catch (e) {}
+    </script>
     <meta name="description" content="Plywood: planks, games, the weekly jackpot and stream perks for the community." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,8 +26,8 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500&display=swap"
     />
     <title>Plywood</title>
-    <script type="module" crossorigin src="./assets/index-BFjiHgSy.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-ckuz4NyN.css">
+    <script type="module" crossorigin src="./assets/index-CyEAb9AA.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-KvanKmLd.css">
   </head>
   <body>
     <div id="root"></div>
